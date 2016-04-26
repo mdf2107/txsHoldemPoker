@@ -28,6 +28,13 @@ int Carta::getValor() {
 }//Fin de metodo getValor
 
 
+char* Carta::getTree() {
+
+	return tree;
+
+}//Fin de metodo getValor
+
+
 bool Carta::estaDisponible() {
 	
 	return disponible;
@@ -40,16 +47,32 @@ void Carta::setDisp(bool a) {
 
 void Carta::setPalo(int p) {
 	palo = p;
-
+	setTree(p);
 }
 
 
 void Carta::setValor(int v) {
 	valor = v;
-	
+}
 
+void Carta::setTree(int palo) {
 
+	switch (palo) {
 
+	case  1:
+		tree = "de Picas";
+		break;
+	case 2:
+		tree = "de Diamantes";
+		break;
+	case 3:
+		tree = "de Trebol";
+		break;
+	case 4:
+		tree = "de Corazones";
+		break;
+
+	}
 }
 
 

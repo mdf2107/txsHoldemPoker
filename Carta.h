@@ -45,12 +45,12 @@ public:
 	void setPalo(int);
 	void setDisp(bool);
 
+	void setTree(int);
+
 	void asignarValor(char);
 
-
-
+	//Getters
 	char getNumber();
-
 	char * getTree();
 
 	/*
@@ -65,7 +65,6 @@ public:
 	int getPalo();
 
 	
-
 	/*
 	Este método devuelve un tipo de dato booleano para confirmar si la carta puede seleccionarse de la baraja, o si ya ha sido 
 	utilizada durante alguna ronda de apuesta.

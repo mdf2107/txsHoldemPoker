@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Carta.h"
+
 /*
 La clase Jugador simula los atributos y comportamiento dentro de una partida de poquer. Contiene atributos basicos como
 un nombre y monto disponible para apostar.
@@ -11,10 +13,26 @@ class Jugador
 Metodos y variables publicas de la clase Jugador
 */
 public:
+	
+
+
+
 	/*
 	Constructor por defecto de la clase Jugador, define un monto disponible para jugar
 	*/
 	Jugador();
+
+
+	/*
+	Funcion simple que recibe una linea de caracteres y lo asigna como valor nombre al Jugador
+	*/
+	void setNombre(char *);
+	
+	/*
+		Funcion simple que funciona para devolver el valor nombre del jugador
+	*/
+	char* getNombre ();
+
 
 	/*
 	Destructor por defecto de Jugador
@@ -48,7 +66,8 @@ private:
 
 	int disponible;
 	int dinero;
-	char* nombre;
+	char* nombre; //Variable que almacena el nombre aleatorio asignado al jugador
+	
 
 };//Fin de la clase Jugador
 

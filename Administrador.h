@@ -8,9 +8,12 @@ Estudiantes: Julian , Kenneth, Milton Delgado.
 */
 
 #pragma once
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 #include "Jugador.h"
 #include "Carta.h"
-
+#include "Baraja.h"
 
 class Administrador
 {
@@ -26,7 +29,6 @@ public:
 	*/
 	Administrador();
 
-	//A todos les puse void xq el diagrama no tenía el tipo del metodo.
 
 	/*
 	Este metodo se encarga, como su nombre lo dice, de inicializar el juego, crear y una partida y pedir el numero de
@@ -48,6 +50,12 @@ public:
 	Metodo Auxiliar para determinar quien es el ganador de cada ronda
 	*/
 	void determinarGanador();
+
+
+	/*
+	Funcion que hace un llamado a rand para generar un numero x de jugadores para la partida.
+	*/
+	int tamanoArray();
 	
 	/*
 	Destructor por defecto de la clase Administrador
@@ -55,10 +63,16 @@ public:
 	~Administrador();
 
 
-	int numJugadores; //Almacena un valor que determina la cantidad de jugadores en la partida.
+	int numJugadores ; //Almacena un valor que determina la cantidad de jugadores en la partida.
 	Jugador* Jugadores; //Almacena una referencia a los jugadores participantes de la partida
 	int apuestaMinima; // Define el monto minimo de apuesta para los jugadores
 	int lote; //Lleva la cuenta del total de premio por ronda
+
+	
+
+	Jugador players[1];
+
+	Baraja mazo;
 
 	char* Nombres[10]; //Almacena una lista de nombres que serán aleatoriamente seleccionados y asignados a cada jugador.
 	Carta* mesa; //Puntero a Cartas obtenidas a partir de la clase Baraja.
